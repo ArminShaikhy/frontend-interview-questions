@@ -1,25 +1,32 @@
-### 1. چگونه یک برنامه React را برای رعایت استانداردهای اپلیکیشن وب پیش‌رونده (PWA) طراحی می‌کنید؟
+### 1. چطور یک برنامه React طراحی می‌کنید که با استانداردهای PWA مطابقت داشته باشه؟
 
-**پاسخ:**
-من با اطمینان از رعایت معیارهای اصلی PWA شروع می‌کنم:
+**پاسخ:**  
+من مطمئن می‌شم که شرایط اصلی PWA رعایت شده:
 
-- **رابط کاربری پاسخ‌گو**: طراحی‌شده با رویکرد موبایل‌اول با استفاده از چارچوب‌های CSS یا کوئری‌های رسانه‌ای.
-- **HTTPS**: برای سرویس‌ورکرها و امنیت ضروری است.
-- **مانیفست اپلیکیشن وب**: متادیتای برنامه (نام، آیکون‌ها، رنگ تم) را تعریف می‌کند.
-- **سرویس‌ورکر**: کش و پشتیبانی آفلاین را فعال می‌کند.
+- **رابط کاربری ریسپانسیو** : طراحی موبایل-اول با CSS یا media query.
+- **HTTPS** : الزامی برای فعال‌سازی service worker و امنیت.
+- **Web App Manifest** : مشخصات اپ مثل اسم، آیکون، رنگ.
+- **Service Worker** : برای کش و پشتیبانی آفلاین.
 
-در `create-react-app`، بسیاری از موارد پیش‌فرض آماده است. من `manifest.json` را سفارشی کرده و سرویس‌ورکر را ثبت می‌کنم:
+در `create-react-app` خیلیاش آماده‌ست. من `manifest.json` رو شخصی‌سازی می‌کنم و service worker رو رجیستر می‌کنم:
 
-```jsx
+```
 // index.js
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 serviceWorkerRegistration.register();
+```
 
-همچنین از Lighthouse برای ممیزی و تأیید انطباق استفاده می‌کنم.
+همچنین از Lighthouse برای بررسی و تایید استفاده می‌کنم.
 
+<br />
 
-2. رویکرد شما برای پیاده‌سازی کش آفلاین در یک برنامه React با استفاده از سرویس‌ورکرها چیست؟
-پاسخ:من از یک سرویس‌ورکر برای کش دارایی‌های ضروری (HTML، CSS، JS) و به‌صورت اختیاری پاسخ‌های API استفاده می‌کنم:
+### 2. چطور از service worker برای کش کردن آفلاین در React استفاده می‌کنید؟
+
+**پاسخ:**  
+از یک service worker استفاده می‌کنم تا فایل‌های اصلی (HTML, CSS, JS) و در صورت نیاز API ها رو کش کنم:
+
+```
+// نصب اولیه و کش فایل‌ها
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('static-v1').then(cache =>
@@ -27,8 +34,12 @@ self.addEventListener('install', event => {
     )
   );
 });
+```
 
-برای کش API:
+برای کش کردن API:
+
+```
+// واکشی با fallback به کش
 self.addEventListener('fetch', event => {
   if (event.request.url.includes('/api/')) {
     event.respondWith(
@@ -36,18 +47,21 @@ self.addEventListener('fetch', event => {
     );
   }
 });
+```
 
-این اطمینان می‌دهد که پوسته برنامه و برخی داده‌های پویا به‌صورت آفلاین در دسترس هستند.
+<br />
 
+### 3. چطور نوتیفیکیشن پوش رو توی PWA با React پیاده‌سازی می‌کنید؟
 
-3. چگونه اعلان‌های فشاری را در یک PWA React ادغام می‌کنید؟
-پاسخ:
+**پاسخ:**  
 
-درخواست مجوز با استفاده از API اعلان‌ها.
-ثبت برای فشار با API فشار و سرویس‌ورکر.
-اشتراک در سرویس فشار (مثل Firebase Cloud Messaging یا سرور VAPID).
-مدیریت فشار در سرویس‌ورکر:
+1. گرفتن اجازه با Notifications API.
+2. ثبت در Push API و service worker.
+3. سابسکرایب به سرویس پوش مثل FCM یا VAPID.
+4. هندل کردن پوش در service worker:
 
+```
+// گوش دادن به نوتیفیکیشن جدید
 self.addEventListener('push', event => {
   const data = event.data.json();
   self.registration.showNotification(data.title, {
@@ -55,56 +69,64 @@ self.addEventListener('push', event => {
     icon: '/icons/icon-192.png'
   });
 });
+```
 
-در سمت React، منطق اشتراک را ادغام کرده و آن را به بک‌اند برای ذخیره‌سازی ارسال می‌کنم.
+در React من سابسکریپشن رو ذخیره می‌کنم و به backend می‌فرستم.
 
+<br />
 
-4. استراتژی شما برای اطمینان از عملکرد یک برنامه React به‌صورت آفلاین با داده‌های پویا چیست؟
-پاسخ:
+### 4. چطور مطمئن می‌شید که React app شما در حالت آفلاین با داده داینامیک هم کار می‌کنه؟
 
-کش داده‌های API پویا با استفاده از IndexedDB (از طریق کتابخانه‌هایی مثل idb) یا localStorage.
-استفاده از استراتژی "ابتدا کش، سپس شبکه" یا "شبکه با بازگشت به کش".
-نگهداری یک صف از عملیات نوشتن (مثل ارسال فرم‌ها) و همگام‌سازی آن‌ها هنگام آنلاین شدن.
+**پاسخ:**  
 
-مثال:
-// بازگشت به کش در صورت شکست
+- کش کردن داده API با IndexedDB (مثل `idb`) یا localStorage.
+- استفاده از استراتژی "cache then network" یا "network fallback to cache".
+- نگهداری صف برای عملیات نوشتاری و سینک کردن بعد از وصل شدن.
+
+```
+// استفاده از کش هنگام قطع بودن شبکه
 const getData = async () => {
   try {
-    const res = await fetch('/api/داده');
+    const res = await fetch('/api/data');
     const json = await res.json();
-    localStorage.setItem('داده_کش', JSON.stringify(json));
+    localStorage.setItem('cachedData', JSON.stringify(json));
     return json;
   } catch {
-    return JSON.parse(localStorage.getItem('داده_کش'));
+    return JSON.parse(localStorage.getItem('cachedData'));
   }
 };
+```
 
+<br />
 
+### 5. چطور قابلیت آفلاین اپ React PWA رو روی دستگاه‌ها و مرورگرهای مختلف تست می‌کنید؟
 
-5. چگونه قابلیت‌های آفلاین یک PWA React را در دستگاه‌ها و مرورگرهای مختلف آزمایش می‌کنید؟
-پاسخ:
+**پاسخ:**  
 
-استفاده از Chrome DevTools → تب Application → Service Workers → شبیه‌سازی آفلاین.
-انجام ممیزی‌های Lighthouse برای پشتیبانی آفلاین.
-غیرفعال کردن دستی Wi-Fi و آزمایش جریان‌های بحرانی.
-استفاده از BrowserStack یا دستگاه‌های واقعی برای تست بین‌مرورگری.
-آزمایش شروع سرد (کاملاً آفلاین) و شروع گرم (جلسه کش‌شده).
+- استفاده از **Chrome DevTools** → بخش Application → حالت آفلاین.
+- بررسی با Lighthouse برای تایید.
+- خاموش کردن وای‌فای برای تست دستی.
+- استفاده از **BrowserStack** یا دستگاه واقعی.
+- تست حالت‌های مختلف: cold start (کاملا آفلاین) و warm start (با کش).
 
+<br />
 
+### 6. چطور نصب‌پذیری (Installability) اپ React PWA رو بهینه می‌کنید؟
 
-6. رویکرد شما برای بهینه‌سازی قابلیت نصب یک PWA React (مثل فایل‌های مانیفست) چیست؟
-پاسخ:
+**پاسخ:**  
 
-اطمینان از معتبر بودن manifest.json و لینک شدن در index.html:
+- بررسی و اتصال فایل `manifest.json` در `index.html`:
 
+```html
 <link rel="manifest" href="/manifest.json" />
+```
 
+- داشتن فیلدهای لازم:
 
-شامل فیلدهای مورد نیاز: name، short_name، start_url، display، icons و theme_color.
-
+```json
 {
-  "name": "برنامه من",
-  "short_name": "برنامه",
+  "name": "My App",
+  "short_name": "App",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -114,65 +136,70 @@ const getData = async () => {
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
+```
 
+- نمایش prompt نصب با `beforeinstallprompt`.
 
-نمایش اعلان‌های نصب با استفاده از رویداد beforeinstallprompt.
+<br />
 
+### 7. در هنگام قطعی شبکه، چطور مدیریت وضعیت (state management) در React PWA انجام می‌دید؟
 
+**پاسخ:**  
 
-7. چگونه مدیریت حالت را در یک PWA React طی اختلالات شبکه مدیریت می‌کنید؟
-پاسخ:
+- استفاده از استراتژی local-first با Zustand، Redux Persist یا Dexie.js.
+- بررسی وضعیت اتصال با `navigator.onLine`.
+- صف کردن عملیات و اجرای آن بعد از reconnect.
 
-استفاده از استراتژی حالت محلی‌اول با کتابخانه‌هایی مثل Zustand، Redux Persist یا Dexie.js برای همگام‌سازی با IndexedDB.
-تشخیص آنلاین/آفلاین با استفاده از navigator.onLine یا window.addEventListener('online').
-صف‌بندی اقدامات انجام‌شده در حالت آفلاین و پردازش مجدد آن‌ها هنگام اتصال مجدد.
-
-مثال:
-window.addEventListener('آنلاین', () => {
-  // پردازش اقدامات در صف
+```
+// بعد از اتصال دوباره، صف رو اجرا کن
+window.addEventListener('online', () => {
+  // اجرا عملیات در صف
 });
+```
 
-هدف، یکنواختی نهایی بدون مسدود کردن رابط کاربری است.
+<br />
 
+### 8. چطور مشکلات مربوط به service worker رو در React دیباگ می‌کنید؟
 
-8. فرآیند شما برای اشکال‌زدایی مشکلات سرویس‌ورکر در یک برنامه React چیست؟
-پاسخ:
+**پاسخ:**  
 
-باز کردن DevTools → Application → Service Workers برای بررسی چرخه حیات.
-استفاده از console.log() داخل سرویس‌ورکر و بررسی DevTools → Console → Service Worker.
-اعتبارسنجی فعال شدن رویدادهای fetch و install.
-پاک‌سازی کش‌های قدیمی در طول ارتقاء نسخه.
-استفاده از Lighthouse برای شناسایی استراتژی‌های کش شکسته یا مشکلات ثبت.
+1. بررسی در **DevTools → Application → Service Workers**.
+2. لاگ گرفتن داخل service worker با `console.log()`.
+3. چک کردن اینکه `fetch` و `install` اجرا می‌شن.
+4. پاک کردن کش‌های قدیمی هنگام نسخه جدید.
+5. استفاده از **Lighthouse** برای بررسی دقیق‌تر.
 
+```
+// پاکسازی کش قدیمی
 self.addEventListener('activate', event => {
-  // پاک‌سازی نسخه‌های قدیمی کش
+  // حذف نسخه‌های قبلی
 });
+```
 
+<br />
 
+### 9. چطور تاثیر ویژگی‌های PWA روی عملکرد React app رو اندازه‌گیری می‌کنید؟
 
-9. چگونه تأثیر عملکرد ویژگی‌های PWA را در یک برنامه React اندازه‌گیری می‌کنید؟
-پاسخ:
+**پاسخ:**  
 
-استفاده از Lighthouse برای اندازه‌گیری عملکرد، انطباق PWA و زمان تعاملی (TTI).
-نظارت بر زمان‌بندی سرویس‌ورکر با API Performance.
-ردیابی نرخ موفقیت کش و بازگشت درخواست‌های شبکه با استفاده از لاگ‌گیری سفارشی یا تحلیل‌ها (مثل Sentry، LogRocket).
-استفاده از web-vitals برای ردیابی معیارهایی مثل FCP، LCP و CLS.
+- استفاده از **Lighthouse** برای بررسی TTI، PWA، و performance.
+- نظارت بر زمان‌های service worker با Performance API.
+- آنالیز cache hit rate و fallbackها با ابزارهایی مثل Sentry یا LogRocket.
+- استفاده از `web-vitals` برای متریک‌هایی مثل FCP، LCP، CLS.
 
+<br />
 
+### 10. چطور تیم رو برای توسعه و نگهداری React PWA آموزش می‌دید؟
 
-10. چگونه یک تیم را برای ساخت و نگهداری یک PWA با React آموزش می‌دهید؟
-پاسخ:
+**پاسخ:**  
 
-ایجاد یک سند مشترک یا ویکی داخلی با استانداردهای PWA، الگوها و نمونه‌های کد.
-برگزاری کارگاه‌های زنده یا راهنمایی‌ها درباره:
-سرویس‌ورکرها
-استراتژی‌های کش
-تجربه کاربری مناسب آفلاین
+- ساخت **مستندات یا ویکی داخلی** با الگوها و best practice ها.
+- برگزاری **ورکشاپ زنده** درباره:
+  - service worker
+  - استراتژی کش
+  - تجربه کاربری آفلاین‌پذیر
+- استفاده از **Lighthouse** به عنوان چک‌لیست.
+- ارائه boilerplate یا ریپوی آماده.
+- بررسی کدهای مرتبط با PWA در PR ها.
 
-
-استفاده از Lighthouse به‌عنوان چک‌لیست.
-ارائه مخازن قالب یا بویلرپلیت‌ها.
-بررسی کدهای خاص PWA در PRها برای اطمینان از بهترین روش‌ها.
-
-
-
+<br />
