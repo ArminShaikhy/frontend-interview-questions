@@ -42,6 +42,7 @@ A well-organized collection of frontend interview questions, categorized by topi
 
 Contributions are welcome! Feel free to submit a pull request if you have improvements or additional questions.
 
+##
 
 # سؤالات مصاحبه فرانت‌اند
 
