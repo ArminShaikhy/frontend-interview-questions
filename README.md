@@ -42,11 +42,9 @@ A well-organized collection of frontend interview questions, categorized by topi
 
 Contributions are welcome! Feel free to submit a pull request if you have improvements or additional questions.
 
-## <div dir="rtl" lang="fa">
+##
 
 # سؤالات مصاحبه فرانت‌اند
-
-<div style="text-align: right;">
 
 ![سؤالات مصاحبه فرانت‌اند](./banner.png "سؤالات مصاحبه فرانت‌اند")
 
@@ -89,6 +87,3 @@ Contributions are welcome! Feel free to submit a pull request if you have improv
 ## 🙌 مشارکت
 
 از مشارکت‌ها استقبال می‌شود! در صورت داشتن هرگونه بهبود یا سؤال اضافی، می‌توانید درخواست کش (pull request) ارسال کنید.
-
-</div>
-</div>
