@@ -43,7 +43,7 @@ A well-organized collection of frontend interview questions, categorized by topi
 Contributions are welcome! Feel free to submit a pull request if you have improvements or additional questions.
 
 ##
-
+<div dir="rtl">
 # سؤالات مصاحبه فرانت‌اند
 
 مجموعه‌ای سازمان‌یافته از سؤالات مصاحبه فرانت‌اند، دسته‌بندی‌شده بر اساس موضوع، طراحی‌شده برای کمک به شما در آماده‌سازی برای مصاحبه‌های فنی، تعمیق دانش و خدمت به‌عنوان مرجعی عملی برای یادگیری مداوم.
@@ -85,4 +85,4 @@ Contributions are welcome! Feel free to submit a pull request if you have improv
 ## 🙌 مشارکت
 
 از مشارکت‌ها استقبال می‌شود! در صورت داشتن هرگونه بهبود یا سؤال اضافی، می‌توانید pull request ارسال کنید.
-
+</div>
