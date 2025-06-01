@@ -1,3 +1,9 @@
+---
+title: مدل‌های ذهنی HTML
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. چگونه مدل شیء سند HTML (DOM) و رابطه آن با DOM مجازی React را مفهوم‌سازی می‌کنید؟
 
 **DOM** نمای درختی زنده مرورگر از سند HTML است. دستکاری مستقیم آن به دلیل reflowها/repaintها پرهزینه است.

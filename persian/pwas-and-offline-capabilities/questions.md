@@ -1,3 +1,9 @@
+---
+title: PWA ها و قابلیت‌های آفلاین
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. چطور یک برنامه React طراحی می‌کنید که با استانداردهای PWA مطابقت داشته باشه؟
 
 **پاسخ:**  

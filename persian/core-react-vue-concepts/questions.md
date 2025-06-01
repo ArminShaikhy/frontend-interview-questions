@@ -1,3 +1,9 @@
+---
+title: مفاهیم اصلی React/Vue
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. DOM مجازی چیست و React چگونه از آن برای بهبود عملکرد استفاده می‌کند؟
 
 DOM مجازی (VDOM) یک نمایش سبک و در حافظه از DOM واقعی است. React از آن برای بهینه‌سازی به‌روزرسانی‌ها و رندر استفاده می‌کند.

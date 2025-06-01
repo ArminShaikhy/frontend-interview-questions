@@ -1,3 +1,9 @@
+---
+title: بهینه‌سازی عملکرد و معیارهای اصلی وب
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. چه تکنیک‌هایی می‌توانید برای بهینه‌سازی عملکرد یک برنامه React استفاده کنید؟
 
 - **تقسیم‌بندی کد** با `React.lazy` و importهای پویا.

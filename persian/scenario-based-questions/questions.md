@@ -1,3 +1,9 @@
+---
+title: سؤالات مبتنی بر سناریو
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. طراحی یک کامپوننت مدال قابل استفاده مجدد در React که بتوان آن را از هر جای اپلیکیشن فعال کرد
 
 **رویکرد**: استفاده از context و portal

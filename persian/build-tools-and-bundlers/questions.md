@@ -1,3 +1,9 @@
+---
+title: ابزارهای ساخت و بسته‌بندی
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. مقایسه Webpack، Vite و ESBuild از نظر سرعت، تنظیمات و موارد استفاده. کدام را برای یک پروژه React انتخاب می‌کنید و چرا؟
 
 | ویژگی         | Webpack                                         | Vite                                               | ESBuild                                   |

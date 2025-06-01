@@ -1,3 +1,9 @@
+---
+title: روندهای نوظهور و آینده‌نگری
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. چگونه پتانسیل WebAssembly را در یک برنامه React ارزیابی می‌کنید؟
 
 **پاسخ:**

@@ -1,3 +1,9 @@
+---
+title: CSS و استایل‌دهی
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/persian.css">
+
 ### 1. چگونه به استایل‌دهی در React رویکرد می‌کنید؟ مقایسه CSS-in-JS، Styled Components، Sass و TailwindCSS.
 
 من ابزارهای استایل‌دهی را بر اساس پیچیدگی پروژه، ترجیحات تیم، مقیاس‌پذیری و نیازهای عملکرد انتخاب می‌کنم.
