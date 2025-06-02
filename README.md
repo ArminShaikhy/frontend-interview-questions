@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/readme.css">
-
 # Frontend Interview Questions
 
 ![frontend interview questions](./banner.png "frontend interview questions")
@@ -44,55 +42,46 @@ A well-organized collection of frontend interview questions, categorized by topi
 
 Contributions are welcome! Feel free to submit a pull request if you have improvements or additional questions.
 
-<div class="persian-section" dir="rtl" style="text-align: right; font-family: sans-serif; line-height: 1.8;">
+##
+# سؤالات مصاحبه فرانت‌اند
 
-  <h2>سؤالات مصاحبه فرانت‌اند</h2>
+مجموعه‌ای سازمان‌یافته از سؤالات مصاحبه فرانت‌اند، دسته‌بندی‌شده بر اساس موضوع، طراحی‌شده برای کمک به شما در آماده‌سازی برای مصاحبه‌های فنی، تعمیق دانش و خدمت به‌عنوان مرجعی عملی برای یادگیری مداوم.
 
-  <p>
-    مجموعه‌ای سازمان‌یافته از سؤالات مصاحبه فرانت‌اند، دسته‌بندی‌شده بر اساس موضوع، طراحی‌شده برای کمک به شما در آماده‌سازی برای مصاحبه‌های فنی، تعمیق دانش و خدمت به‌عنوان مرجعی عملی برای یادگیری مداوم.
-  </p>
+## 📚 دسته‌بندی‌ها
 
-  <h3>📚 دسته‌بندی‌ها</h3>
-  <ul>
-    <li><a href="./persian/advanced-features-and-architecture/questions.html">ویژگی‌ها و معماری پیشرفته</a></li>
-    <li><a href="./persian/leadership-and-team-collaboration/questions.html">رهبری و همکاری تیمی</a></li>
-    <li><a href="./persian/build-tools-and-bundlers/questions.html">ابزارهای ساخت و بسته‌بندی</a></li>
-    <li><a href="./persian/micro-frontends/questions.html">میکرو-فرانت‌اندها</a></li>
-    <li><a href="./persian/ci-cd-and-monitoring-tools/questions.html">CI/CD و ابزارهای نظارتی</a></li>
-    <li><a href="./persian/performance-optimization-and-core-web-vitals/questions.html">بهینه‌سازی عملکرد و معیارهای اصلی وب</a></li>
-    <li><a href="./persian/core-react-vue-concepts/questions.html">مفاهیم اصلی React/Vue</a></li>
-    <li><a href="./persian/pwas-and-offline-capabilities/questions.html">PWA ها و قابلیت‌های آفلاین</a></li>
-    <li><a href="./persian/css-and-styling/questions.html">CSS و استایل‌دهی</a></li>
-    <li><a href="./persian/css-mental-models/questions.html">مدل‌های ذهنی CSS</a></li>
-    <li><a href="./persian/scenario-based-questions/questions.html">سؤالات مبتنی بر سناریو</a></li>
-    <li><a href="./persian/deep-frontend-development/questions.html">توسعه عمیق فرانت‌اند</a></li>
-    <li><a href="./persian/single-page-applications/questions.html">اپلیکیشن‌های تک‌صفحه‌ای</a></li>
-    <li><a href="./persian/design-patterns/questions.html">الگوهای طراحی</a></li>
-    <li><a href="./persian/state-management/questions.html">مدیریت حالت</a></li>
-    <li><a href="./persian/emerging-trends-and-future-proofing/questions.html">روندهای نوظهور و آینده‌نگری</a></li>
-    <li><a href="./persian/teamwork-and-best-practices/questions.html">کار تیمی و بهترین روش‌ها</a></li>
-    <li><a href="./persian/frontend-backend-collaboration-and-api-design/questions.html">همکاری فرانت‌اند-بک‌اند و طراحی API</a></li>
-    <li><a href="./persian/testing/questions.html">تست</a></li>
-    <li><a href="./persian/frontend-security/questions.html">امنیت فرانت‌اند</a></li>
-    <li><a href="./persian/typescript-and-javascript/questions.html">TypeScript و جاوااسکریپت</a></li>
-    <li><a href="./persian/frontend-system-design/questions.html">طراحی سیستم فرانت‌اند</a></li>
-    <li><a href="./persian/web-accessibility/questions.html">دسترسی‌پذیری وب</a></li>
-    <li><a href="./persian/html-mental-models/questions.html">مدل‌های ذهنی HTML</a></li>
-    <li><a href="./persian/web-performance-budgets-and-optimization-strategies/questions.html">بودجه‌های عملکرد وب و استراتژی‌های بهینه‌سازی</a></li>
-  </ul>
+- [ویژگی‌ها و معماری پیشرفته](./persian/advanced-features-and-architecture/questions.md)
+- [رهبری و همکاری تیمی](./persian/leadership-and-team-collaboration/questions.md)
+- [ابزارهای ساخت و بسته‌بندی](./persian/build-tools-and-bundlers/questions.md)
+- [میکرو-فرانت‌اندها](./persian/micro-frontends/questions.md)
+- [CI/CD و ابزارهای نظارتی](./persian/ci-cd-and-monitoring-tools/questions.md)
+- [بهینه‌سازی عملکرد و معیارهای اصلی وب](./persian/performance-optimization-and-core-web-vitals/questions.md)
+- [مفاهیم اصلی React/Vue](./persian/core-react-vue-concepts/questions.md)
+- [PWAها و قابلیت‌های آفلاین](./persian/pwas-and-offline-capabilities/questions.md)
+- [CSS و استایل‌دهی](./persian/css-and-styling/questions.md)
+- [مدل‌های ذهنی CSS](./persian/css-mental-models/questions.md)
+- [سؤالات مبتنی بر سناریو](./persian/scenario-based-questions/questions.md)
+- [توسعه عمیق فرانت‌اند](./persian/deep-frontend-development/questions.md)
+- [اپلیکیشن‌های تک‌صفحه‌ای](./persian/single-page-applications/questions.md)
+- [الگوهای طراحی](./persian/design-patterns/questions.md)
+- [مدیریت حالت](./persian/state-management/questions.md)
+- [روندهای نوظهور و آینده‌نگری](./persian/emerging-trends-and-future-proofing/questions.md)
+- [کار تیمی و بهترین روش‌ها](./persian/teamwork-and-best-practices/questions.md)
+- [همکاری فرانت‌اند-بک‌اند و طراحی API](./persian/frontend-backend-collaboration-and-api-design/questions.md)
+- [تست](./persian/testing/questions.md)
+- [امنیت فرانت‌اند](./persian/frontend-security/questions.md)
+- [TypeScript و جاوااسکریپت](./persian/typescript-and-javascript/questions.md)
+- [طراحی سیستم فرانت‌اند](./persian/frontend-system-design/questions.md)
+- [دسترسی‌پذیری وب](./persian/web-accessibility/questions.md)
+- [مدل‌های ذهنی HTML](./persian/html-mental-models/questions.md)
+- [بودجه‌های عملکرد وب و استراتژی‌های بهینه‌سازی](./persian/web-performance-budgets-and-optimization-strategies/questions.md)
 
-  <h3>💡 نحوه استفاده</h3>
-  <ul>
-    <li>✅ برای مطالعه برای مصاحبه‌های فرانت‌اند استفاده کنید</li>
-    <li>🔁 سؤالات بیشتری اضافه کنید یا پاسخ‌ها را بهبود دهید</li>
-    <li>📥 این مخزن را کلون یا فورک کنید و به‌طور منظم تمرین کنید</li>
-  </ul>
+## 💡 نحوه استفاده
 
-  <h3>🙌 مشارکت</h3>
-  <p>
-    مشارکت‌ها خوش‌آمد هستند! اگر بهبود یا سؤالات اضافی دارید، آزادانه یک درخواست کشش ارسال کنید.
-  </p>
+- ✅ برای مطالعه برای مصاحبه‌های فرانت‌اند استفاده کنید
+- 🔁 سؤالات بیشتری اضافه کنید یا پاسخ‌ها را بهبود دهید
+- 📥 این مخزن را کلون یا فورک کنید و به‌طور منظم تمرین کنید
 
-</div>
+## 🙌 مشارکت
 
+مشارکت‌ها خوش‌آمد هستند! اگر بهبود یا سؤالات اضافی دارید، آزادانه یک درخواست کشش ارسال کنید.
 
