@@ -54,31 +54,31 @@ Contributions are welcome! Feel free to submit a pull request if you have improv
 
   <h3>📚 دسته‌بندی‌ها</h3>
   <ul>
-    <li><a href="./persian/advanced-features-and-architecture/questions.html">ویژگی‌ها و معماری پیشرفته</a></li>
-    <li><a href="./persian/leadership-and-team-collaboration/questions.html">رهبری و همکاری تیمی</a></li>
-    <li><a href="./persian/build-tools-and-bundlers/questions.html">ابزارهای ساخت و بسته‌بندی</a></li>
-    <li><a href="./persian/micro-frontends/questions.html">میکرو-فرانت‌اندها</a></li>
-    <li><a href="./persian/ci-cd-and-monitoring-tools/questions.html">CI/CD و ابزارهای نظارتی</a></li>
-    <li><a href="./persian/performance-optimization-and-core-web-vitals/questions.html">بهینه‌سازی عملکرد و معیارهای اصلی وب</a></li>
-    <li><a href="./persian/core-react-vue-concepts/questions.html">مفاهیم اصلی React/Vue</a></li>
-    <li><a href="./persian/pwas-and-offline-capabilities/questions.html">PWA ها و قابلیت‌های آفلاین</a></li>
-    <li><a href="./persian/css-and-styling/questions.html">CSS و استایل‌دهی</a></li>
-    <li><a href="./persian/css-mental-models/questions.html">مدل‌های ذهنی CSS</a></li>
-    <li><a href="./persian/scenario-based-questions/questions.html">سؤالات مبتنی بر سناریو</a></li>
-    <li><a href="./persian/deep-frontend-development/questions.html">توسعه عمیق فرانت‌اند</a></li>
-    <li><a href="./persian/single-page-applications/questions.html">اپلیکیشن‌های تک‌صفحه‌ای</a></li>
-    <li><a href="./persian/design-patterns/questions.html">الگوهای طراحی</a></li>
-    <li><a href="./persian/state-management/questions.html">مدیریت حالت</a></li>
-    <li><a href="./persian/emerging-trends-and-future-proofing/questions.html">روندهای نوظهور و آینده‌نگری</a></li>
-    <li><a href="./persian/teamwork-and-best-practices/questions.html">کار تیمی و بهترین روش‌ها</a></li>
-    <li><a href="./persian/frontend-backend-collaboration-and-api-design/questions.html">همکاری فرانت‌اند-بک‌اند و طراحی API</a></li>
-    <li><a href="./persian/testing/questions.html">تست</a></li>
-    <li><a href="./persian/frontend-security/questions.html">امنیت فرانت‌اند</a></li>
-    <li><a href="./persian/typescript-and-javascript/questions.html">TypeScript و جاوااسکریپت</a></li>
-    <li><a href="./persian/frontend-system-design/questions.html">طراحی سیستم فرانت‌اند</a></li>
-    <li><a href="./persian/web-accessibility/questions.html">دسترسی‌پذیری وب</a></li>
-    <li><a href="./persian/html-mental-models/questions.html">مدل‌های ذهنی HTML</a></li>
-    <li><a href="./persian/web-performance-budgets-and-optimization-strategies/questions.html">بودجه‌های عملکرد وب و استراتژی‌های بهینه‌سازی</a></li>
+    <li><a href="{% link persian/advanced-features-and-architecture/questions.md %}">ویژگی‌ها و معماری پیشرفته</a></li>
+    <li><a href="{% link persian/leadership-and-team-collaboration/questions.md %}">رهبری و همکاری تیمی</a></li>
+    <li><a href="{% link persian/build-tools-and-bundlers/questions.md %}">ابزارهای ساخت و بسته‌بندی</a></li>
+    <li><a href="{% link persian/micro-frontends/questions.md %}">میکرو-فرانت‌اندها</a></li>
+    <li><a href="{% link persian/ci-cd-and-monitoring-tools/questions.md %}">CI/CD و ابزارهای نظارتی</a></li>
+    <li><a href="{% link persian/performance-optimization-and-core-web-vitals/questions.md %}">بهینه‌سازی عملکرد و معیارهای اصلی وب</a></li>
+    <li><a href="{% link persian/core-react-vue-concepts/questions.md %}">مفاهیم اصلی React/Vue</a></li>
+    <li><a href="{% link persian/pwas-and-offline-capabilities/questions.md %}">PWA ها و قابلیت‌های آفلاین</a></li>
+    <li><a href="{% link persian/css-and-styling/questions.md %}">CSS و استایل‌دهی</a></li>
+    <li><a href="{% link persian/css-mental-models/questions.md %}">مدل‌های ذهنی CSS</a></li>
+    <li><a href="{% link persian/scenario-based-questions/questions.md %}">سؤالات مبتنی بر سناریو</a></li>
+    <li><a href="{% link persian/deep-frontend-development/questions.md %}">توسعه عمیق فرانت‌اند</a></li>
+    <li><a href="{% link persian/single-page-applications/questions.md %}">اپلیکیشن‌های تک‌صفحه‌ای</a></li>
+    <li><a href="{% link persian/design-patterns/questions.md %}">الگوهای طراحی</a></li>
+    <li><a href="{% link persian/state-management/questions.md %}">مدیریت حالت</a></li>
+    <li><a href="{% link persian/emerging-trends-and-future-proofing/questions.md %}">روندهای نوظهور و آینده‌نگری</a></li>
+    <li><a href="{% link persian/teamwork-and-best-practices/questions.md %}">کار تیمی و بهترین روش‌ها</a></li>
+    <li><a href="{% link persian/frontend-backend-collaboration-and-api-design/questions.md %}">همکاری فرانت‌اند-بک‌اند و طراحی API</a></li>
+    <li><a href="{% link persian/testing/questions.md %}">تست</a></li>
+    <li><a href="{% link persian/frontend-security/questions.md %}">امنیت فرانت‌اند</a></li>
+    <li><a href="{% link persian/typescript-and-javascript/questions.md %}">TypeScript و جاوااسکریپت</a></li>
+    <li><a href="{% link persian/frontend-system-design/questions.md %}">طراحی سیستم فرانت‌اند</a></li>
+    <li><a href="{% link persian/web-accessibility/questions.md %}">دسترسی‌پذیری وب</a></li>
+    <li><a href="{% link persian/html-mental-models/questions.md %}">مدل‌های ذهنی HTML</a></li>
+    <li><a href="{% link persian/web-performance-budgets-and-optimization-strategies/questions.md %}">بودجه‌های عملکرد وب و استراتژی‌های بهینه‌سازی</a></li>
   </ul>
 
   <h3>💡 نحوه استفاده</h3>
@@ -94,5 +94,3 @@ Contributions are welcome! Feel free to submit a pull request if you have improv
   </p>
 
 </div>
-
-
