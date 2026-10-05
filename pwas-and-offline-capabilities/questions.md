@@ -90,7 +90,11 @@ On the React side, I integrate the subscription logic and send it to the backend
 - Use **"Cache then network"** or **"Network falling back to cache"** strategy.
 - Maintain a **queue** of write operations (e.g., form submissions) and sync them when online.
 
-Example:
+For writes, store the queued intent in **IndexedDB** before showing it as saved locally. Keep a stable operation ID across retries, with **server-side idempotency** to avoid applying the same write twice. A timeout does not prove that the server rejected the write: keep its status pending until an acknowledgement or status check confirms the outcome.
+
+For a worked interview scenario, see [Offline Email Client — free question and reference answer](https://frontendatlas.com/system-design/offline-email-client), which covers persistent drafts, incremental sync, and queued sending.
+
+Read-cache example (the write queue needs separate storage and synchronization):
 
 ```
 
